@@ -1,3 +1,2 @@
-import {redirect} from 'next/navigation'
-import {supabaseServer} from '@/lib/supabase-server'
-export default async function Home(){const sb=await supabaseServer();const {data:{user}}=await sb.auth.getUser();redirect(user?'/dashboard':'/login')}
+import { redirect } from 'next/navigation'
+export default function Home(){redirect('/dashboard')}
